@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        font-family: Arial;
+      }
+      .container{
+        display: grid;
+        /* grid-template: 300px 100px 100px / auto auto auto; */
+        /* grid-template: 300px 100px 100px / repeat(4, 1fr); */
+        grid-template: 300px 100px 100px / repeat(4, minmax(200px, 1fr));
+        grid-gap: 10px;
+
+      }
+      .item {
+        background: ligthblue;
+        padding: 10px;
+        border: 1px solid red;
+        /* margin-right: 10px;
+        margin-bottom: 10px; */
+      }
+      .item:nth-of-type(4){
+        background: blue;
+        overflow: auto;
+        /* display: subgrid; */
+        display: grid;
+        grid-template: 50px 50px 50px / 75px 75px 75px;
+      }
+      .item .item{
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="item">contennido 1</div>
+      <div class="item">contennido 2</div>
+      <div class="item">contennido 3</div>
+      <div class="item">
+        <div class="item">sub item 1</div>
+        <div class="item">sub item 2</div>
+        <div class="item">sub item 3</div>
+        <div class="item">sub item 4</div>
+        <div class="item">sub item 5</div>
+      </div>
+      <div class="item">contennido 5</div>
+      <div class="item">contennido 6</div>
+      <div class="item">contennido 7</div>
+      <div class="item">contennido 8</div>
+      <div class="item">contennido 9</div>
+      <div class="item">contennido 10</div>
+      <div class="item">contennido 11</div>
+      <div class="item">contennido 12</div>
+    </section>
+  </body>
+</html>
